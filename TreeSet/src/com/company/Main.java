@@ -3,8 +3,24 @@ package com.company;
 import lombok.Data;
 
 public class Main {
-    public static void main(String[] args) {
+    static TreeSet<Student> studTree;
 
+    void add(Student stud) {
+
+    }
+
+    public static void main(String[] args) {
+        studTree = new TreeSet<Student>((a, b) -> {
+            if (a.name.compareTo(b.name) == -1) {
+
+            } else if (a.name.compareTo(b.name) == 2) {
+
+            } else if (a.name.compareTo(b.name) == 0) {
+
+            }
+
+            return true;
+        });
     }
 }
 
@@ -26,12 +42,27 @@ interface Comparator<T> {
 }
 
 class TreeSet<T> {
+    private Node<T> root;
 
+    Comparator<T> comp;
 
+    TreeSet(Comparator<T> comp) {
+        this.comp = comp;
+    }
 
-    @Data
     class Node<T> {
-        T value;
+        private Node<T> right;
+        private Node<T> left;
+        private T value;
+
+        public Node (T value) {
+            this.value = value;
+        }
+
+        public T getValue() {
+            return this.value;
+        }
+
 
     }
 }
