@@ -3,24 +3,53 @@ package com.company;
 import lombok.Data;
 
 public class Main {
-    static TreeSet<Student> studTree;
-
-    void add(Student stud) {
-
-    }
+    static TreeSet<Student> studTreeName;
+//    static TreeSet<Student> studTreeSurname;
+//    static TreeSet<Student> studTreeAvg;
 
     public static void main(String[] args) {
-        studTree = new TreeSet<Student>((a, b) -> {
-            if (a.name.compareTo(b.name) == -1) {
 
-            } else if (a.name.compareTo(b.name) == 2) {
-
-            } else if (a.name.compareTo(b.name) == 0) {
-
+        studTreeName = new TreeSet<Student>(new Comparator<Student>() {
+            @Override
+            public int compare(Student a, Student b) {
+                return a.name.compareTo(b.name);
             }
-
-            return true;
         });
+
+        Student stud1 = new Student("d", "b", 12.5);
+        Student stud2 = new Student("a", "c", 14.45);
+        Student stud3 = new Student("j", "c", 14.45);
+        Student stud4 = new Student("e", "c", 14.45);
+
+        studTreeName.add(stud1);
+        studTreeName.add(stud2);
+        studTreeName.add(stud3);
+        studTreeName.add(stud4);
+
+
+//        studTreeSurname = new TreeSet<Student>((a, b) -> {
+//            if (a.surname.compareTo(b.surname) == -1) {
+//
+//            } else if (a.surname.compareTo(b.surname) == 2) {
+//
+//            } else if (a.surname.compareTo(b.surname) == 0) {
+//
+//            }
+//
+//            return 1;
+//        });
+//
+//        studTreeAvg = new TreeSet<Student>((a, b) -> {
+//            if (a.avg < b.avg) {
+//
+//            } else if (a.avg > b.avg) {
+//
+//            } else if (a.avg == b.avg) {
+//
+//            }
+//
+//            return 1;
+//        });
     }
 }
 
@@ -38,11 +67,12 @@ class Student {
 }
 
 interface Comparator<T> {
-    boolean compare(T a, T b);
+    int compare(T a, T b);
 }
 
 class TreeSet<T> {
-    private Node<T> root;
+    private Node root;
+    public short count;
 
     Comparator<T> comp;
 
@@ -50,9 +80,19 @@ class TreeSet<T> {
         this.comp = comp;
     }
 
-    class Node<T> {
-        private Node<T> right;
-        private Node<T> left;
+    void add(T item) {
+        if (this.root == null) {
+            this.root = new Node(item);
+        } else {
+            this.root.AddElemnt(item);
+        }
+        this.count++;
+    }
+
+
+    class Node {
+        private Node right;
+        private Node left;
         private T value;
 
         public Node (T value) {
@@ -63,6 +103,22 @@ class TreeSet<T> {
             return this.value;
         }
 
+        public void AddElemnt(T item){
+            if(comp.compare(value, item)>0) {
+                if(this.right == null) {
+                    this.right = new Node(item);
+                } else {
+                    this.right.AddElemnt(item);
+                }
+            } else if(comp.compare(value, item)< 0) {
+                if(this.left == null) {
+                    this.left= new Node(item);
+                } else {
+                    this.left.AddElemnt(item);
+                }
+            } else if(comp.compare(value, item) == 0) {
 
+            }
+        }
     }
 }
