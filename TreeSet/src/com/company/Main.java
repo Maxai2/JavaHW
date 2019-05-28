@@ -4,8 +4,8 @@ import lombok.Data;
 
 public class Main {
     static TreeSet<Student> studTreeName;
-//    static TreeSet<Student> studTreeSurname;
-//    static TreeSet<Student> studTreeAvg;
+    static TreeSet<Student> studTreeSurname;
+    static TreeSet<Student> studTreeAvg;
 
     public static void main(String[] args) {
 
@@ -27,29 +27,26 @@ public class Main {
         studTreeName.add(stud4);
 
 
-//        studTreeSurname = new TreeSet<Student>((a, b) -> {
-//            if (a.surname.compareTo(b.surname) == -1) {
-//
-//            } else if (a.surname.compareTo(b.surname) == 2) {
-//
-//            } else if (a.surname.compareTo(b.surname) == 0) {
-//
-//            }
-//
-//            return 1;
-//        });
-//
-//        studTreeAvg = new TreeSet<Student>((a, b) -> {
-//            if (a.avg < b.avg) {
-//
-//            } else if (a.avg > b.avg) {
-//
-//            } else if (a.avg == b.avg) {
-//
-//            }
-//
-//            return 1;
-//        });
+        studTreeSurname = new TreeSet<Student>(new Comparator<Student>() {
+            @Override
+            public int compare(Student a, Student b) {
+                return a.surname.compareTo(b.surname);
+            }
+
+        });
+
+        studTreeAvg = new TreeSet<Student>(new Comparator<Student>() {
+            @Override
+            public int compare(Student a, Student b) {
+                if (a.avg > b.avg) {
+                    return -1;
+                } else if (a.avg < b.avg) {
+                    return 1;
+                }
+                return 0;
+            }
+
+        });
     }
 }
 
@@ -104,20 +101,20 @@ class TreeSet<T> {
         }
 
         public void AddElemnt(T item){
-            if(comp.compare(value, item)>0) {
+            if(comp.compare(value, item) > 0) {
                 if(this.right == null) {
                     this.right = new Node(item);
                 } else {
                     this.right.AddElemnt(item);
                 }
-            } else if(comp.compare(value, item)< 0) {
+            } else if(comp.compare(value, item) < 0) {
                 if(this.left == null) {
                     this.left= new Node(item);
                 } else {
                     this.left.AddElemnt(item);
                 }
             } else if(comp.compare(value, item) == 0) {
-
+                return;
             }
         }
     }
