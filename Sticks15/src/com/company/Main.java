@@ -18,12 +18,13 @@ public class Main {
 
             if (win) {
 
-                println("Do you want reapeat?(y/n):", true);
+                println("Do you want reapeat?(y/n): ", false);
                 String ans = scan.next();
-                if (ans == "n") {
+                if (ans.compareTo("n") == 0) {
                     return;
                 } else {
                     win = false;
+                    stickCount = 15;
                 }
             }
             myTurn = turn();
@@ -37,13 +38,17 @@ public class Main {
                         println("Input count of sticks(1-3): ", false);
                         byte cnt = scan.nextByte();
 
-                        if (stickCount - cnt == 1) {
-                            println("\nUser WIN, CONGRATULATIONS!", true);
-                            win = true;
+                        if (!(1 <= cnt && cnt <= 3)) {
+                            println("\tOnly 1/2/3!!!", true);
                         } else if (stickCount - cnt <= 0) {
                             println("IMPOSSIBLE!", true);
-                        } else if (stickCount - cnt > 1) {
+                        } else if (stickCount - cnt >= 1) {
                             stickCount -= cnt;
+                            if (stickCount == 1) {
+                                println("Bot take last stick and lose!", true);
+                                println("\nUser WIN, CONGRATULATIONS!", true);
+                                win = true;
+                            }
                             break;
                         }
                     }
@@ -60,13 +65,15 @@ public class Main {
                         cntB = botTurn(stickCount, 5);
                     } else if (stickCount >= 2) {
                         cntB = botTurn(stickCount, 1);
-                    } else  if (stickCount == 1) {
-                        println("\nBot WIN, CONGRATULATIONS!", true);
-                        win = true;
                     }
 
                     stickCount -= cntB;
                     println("Bot take: " + cntB + " stick", true);
+                    if (stickCount == 1) {
+                        println("User take last stick and lose!", true);
+                        println("\nBot WIN, CONGRATULATIONS!", true);
+                        win = true;
+                    }
                 }
 
                 if (win) {
