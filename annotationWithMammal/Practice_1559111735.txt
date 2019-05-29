@@ -1,0 +1,57 @@
+«адание:
+
+—оздать класс Animal, и сделать производными от него Giraffe, Nosoroge, Slone, Kote и Begemote.
+¬ыборочно 2-3 класса-наследника пометить аннотацией @Mammal.
+—оздать массив ссылок типа Animal, выделить под каждую ссылку пам€ть под объект типа классов-наследников.
+–ефлексивно получить информацию о типе каждого объекта, показать список классов, которые получили аннотацию @Mammal.
+
+ѕроверить наследование аннотаций, путем пометить Animal аннотацией @Mammal а у класса который наследует Animal (например Begemote) убрать аннотацию Mammal.
+«атем проверить рефлексивно проверить у Begemote, что он наследует аннотации родител€ или нет.
+
+ѕример с жирафом:
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.Target;
+import java.lang.annotation.*;
+
+// дл€ того, чтобы ограничить использование аннотации, еЄ нужно проаннотировать ))
+// дл€ этого существует аннотаци€ @Target
+
+// @Target(ElementType.PACKAGE) - только дл€ пакетов
+// @Target(ElementType.TYPE) - только дл€ классов
+// @Target(ElementType.CONSTRUCTOR) - только дл€ конструкторов
+// @Target(ElementType.METHOD) - только дл€ методов
+// @Target(ElementType.FIELD) - только дл€ переменных класса
+// @Target(ElementType.PARAMATER) - только дл€ параметров метода
+// @Target(ElementType.LOCAL_VARIABLE) - только дл€ локальных переменных
+// @Target({ ElementType.PARAMETER, ElementType.LOCAL_VARIABLE })
+
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+@interface Mammal {
+
+    String sound();
+
+    int color() default 0xffffff;
+}
+
+@Mammal(color = 0xFFA844, sound = "uuuu")
+class Giraffe {
+    // some code here
+}
+
+public class JavaApplication1 {
+    public static void main(String args[]) {
+        Giraffe g = new Giraffe();
+        Class gc = g.getClass();
+        Annotation[] annotations = gc.getAnnotations();
+        for (Annotation annotation : annotations) {
+            System.out.println( annotation.annotationType().getSimpleName());
+            if (annotation instanceof Mammal) {
+                Mammal m = (Mammal) (annotation);
+                System.out.println(m.color());
+                System.out.println(m.sound());
+	    }
+	}
+    }
+}
