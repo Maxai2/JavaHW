@@ -31,12 +31,19 @@ public class Main {
                         try {
                             while (true) {
                                 str = in.readLine();
-                                if (str.equals("stop"))
-                                {
-                                    isWork = false;
-                                    break;
-                                }
                                 System.out.println(str);
+
+
+
+
+
+
+
+//                                if (str.equals("stop"))
+//                                {
+//                                    isWork = false;
+//                                    break;
+//                                }
                             }
                         }
                         catch (IOException e) {}
@@ -52,6 +59,8 @@ public class Main {
                             try
                             {
                                 userWord = reader.readLine();
+
+
                                 if (userWord.equals("stop"))
                                 {
                                     out.write("stop" + "\n");

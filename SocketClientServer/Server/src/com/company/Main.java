@@ -39,6 +39,7 @@ class Server {
 class ServerSomthing extends Thread {
 
     private Socket socket;
+    private String nickname;
     private BufferedReader in;
     private BufferedWriter out;
 
@@ -48,24 +49,43 @@ class ServerSomthing extends Thread {
         out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
         start();
     }
+
     @Override
     public void run() {
         String word;
         try {
+            this.send("Input your nickname: ");
+            word = in.readLine();
+            this.nickname = word;
+            word = "";
+
+            String str = "1) Show online\n" +
+                    "2) Send message\n" +
+                    "3) Group\n" +
+                    "4) Exit";
+            this.send(str);
+            word = in.readLine();
 
             while (true) {
-                word = in.readLine();
-                if(word.equals("stop"))
-                {
-                    break;
-                }
-                for (ServerSomthing vr : Server.serverList)
-                {
-                    if(vr.socket != this.socket)
-                    {
-                        vr.send(word);
-                    }
-                }
+
+
+
+
+
+
+
+
+//                if(word.equals("stop"))
+//                {
+//                    break;
+//                }
+//                for (ServerSomthing vr : Server.serverList)
+//                {
+//                    if(vr.socket != this.socket)
+//                    {
+//                        vr.send(word);
+//                    }
+//                }
             }
 
         }
