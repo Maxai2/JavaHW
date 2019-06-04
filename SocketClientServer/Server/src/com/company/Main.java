@@ -53,43 +53,34 @@ class ServerSomthing extends Thread {
     @Override
     public void run() {
         String word;
-        try {
-            this.send("Input your nickname: ");
-            word = in.readLine();
-            this.nickname = word;
-            word = "";
 
-            String str = "1) Show online\n" +
-                    "2) Send message\n" +
-                    "3) Group\n" +
-                    "4) Exit";
-            this.send(str);
-            word = in.readLine();
-
+//        try {
+            rename();
             while (true) {
+                this.send("menu");
 
+                switch (menu()) {
+                    case 1: // onlineUsers
+                        showOnline();
+                        break;
+                    case 2: // msg
+                        break;
+                    case 3: // group
+                        break;
+                    case 4: // rename
+                        break;
+                    case 5: // exit
+                        break;
+                }
 
+//              if(word.equals("stop"))
+//              {
+//                  break;
+//              }
 
-
-
-
-
-
-//                if(word.equals("stop"))
-//                {
-//                    break;
-//                }
-//                for (ServerSomthing vr : Server.serverList)
-//                {
-//                    if(vr.socket != this.socket)
-//                    {
-//                        vr.send(word);
-//                    }
-//                }
             }
-
-        }
-        catch (IOException e) {}
+//        }
+//        catch (IOException e) {}
     }
 
     private void send(String msg)
@@ -100,5 +91,50 @@ class ServerSomthing extends Thread {
             out.flush();
         }
         catch (IOException ignored) {}
+    }
+
+    private void showOnline() {
+        String userList = "";
+        for (ServerSomthing vr : Server.serverList)
+        {
+            if(vr.socket != this.socket)
+            {
+                userList += vr.nickname + "|";
+            }
+        }
+
+        this.send(userList);
+    }
+
+    private void messageWork() {
+
+    }
+
+    private void groupWork() {
+
+    }
+
+    private void rename() {
+        send("Input your nickname: ");
+
+    }
+
+    private int menu() {
+        int sel = 0;
+        try {
+            sel = in.read();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        String str = "1) Show online\n" +
+                "2) Send message\n" +
+                "3) Group\n" +
+                "4) Rename\n" +
+                "5) Exit\n" +
+                "Your choice input number(1-5): ";
+
+        this.send(str);
+        return sel;
     }
 }

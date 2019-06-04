@@ -4,14 +4,14 @@
     <list default="true" id="e698ee47-24e4-4fa4-a4df-6a963b01c1d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/com/company/Main$1ReadMsg.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/com/company/Main$1ReadMsg.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/com/company/Main$1WriteMsg.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/com/company/Main$1WriteMsg.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/com/company/ServerSomthing.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/com/company/ServerSomthing.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../verseSort/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../verseSort/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../verseSort/out/production/verseSort/com/company/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../verseSort/out/production/verseSort/com/company/onSortComplete.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../verseSort/out/production/verseSort/com/company/quickSortCl.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,13 +20,33 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-106912254">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="86" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="86" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+            <state relative-caret-position="353">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,11 +66,16 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1995" />
-    <option name="y" value="2" />
-    <option name="width" value="1860" />
-    <option name="height" value="2173" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="921" />
+    <option name="width" value="1006" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -114,14 +139,16 @@
       <workItem from="1559547249726" duration="1178000" />
       <workItem from="1559591485628" duration="4000" />
       <workItem from="1559591505563" duration="2803000" />
+      <workItem from="1559623440790" duration="3889000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3985000" />
+    <option name="totallyTimeSpent" value="7874000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="798" y="1" width="744" height="869" extended-state="0" />
+    <frame x="921" y="0" width="1006" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.2696793" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -132,7 +159,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2638701" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26367614" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2708559" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -158,14 +185,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Client.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+        <state relative-caret-position="353">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -189,6 +219,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -211,6 +242,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
+          <last-edited>10</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -222,6 +254,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
+          <last-edited>Client</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

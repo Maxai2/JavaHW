@@ -22,7 +22,7 @@ public class Main {
                 in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
                 out = new BufferedWriter(new OutputStreamWriter(clientSocket.getOutputStream()));
 
-                //
+
                 class ReadMsg extends Thread {
                     @Override
                     public void run() {
@@ -33,11 +33,11 @@ public class Main {
                                 str = in.readLine();
                                 System.out.println(str);
 
+                                switch (str) {
+                                    case "menu":
 
-
-
-
-
+                                        break;
+                                }
 
 //                                if (str.equals("stop"))
 //                                {
@@ -48,6 +48,8 @@ public class Main {
                         }
                         catch (IOException e) {}
                     }
+
+
                 }
 
                 //
@@ -61,16 +63,18 @@ public class Main {
                                 userWord = reader.readLine();
 
 
-                                if (userWord.equals("stop"))
-                                {
-                                    out.write("stop" + "\n");
-                                    isWork = false;
-                                    break;
-                                }
-                                else {
-                                    out.write(userWord + "\n");
-                                }
-                                out.flush();
+
+
+//                                if (userWord.equals("stop"))
+//                                {
+//                                    out.write("stop" + "\n");
+//                                    isWork = false;
+//                                    break;
+//                                }
+//                                else {
+//                                    out.write(userWord + "\n");
+//                                }
+//                                out.flush();
                             } catch (IOException e) {
 
                             }
