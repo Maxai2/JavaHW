@@ -55,13 +55,14 @@ class ServerSomthing extends Thread {
         String word;
 
 //        try {
-            rename();
+            this.send("Connected successfully!");
+            this.rename();
             while (true) {
                 this.send("menu");
 
                 switch (menu()) {
                     case 1: // onlineUsers
-                        showOnline();
+                        this.showOnline();
                         break;
                     case 2: // msg
                         break;
@@ -87,8 +88,8 @@ class ServerSomthing extends Thread {
     {
         try
         {
-            out.write(msg + "\n");
-            out.flush();
+            this.out.write(msg + "\n");
+            this.out.flush();
         }
         catch (IOException ignored) {}
     }
@@ -116,25 +117,31 @@ class ServerSomthing extends Thread {
 
     private void rename() {
         send("Input your nickname: ");
-
-    }
-
-    private int menu() {
-        int sel = 0;
         try {
-            sel = in.read();
+            String newNick = this.in.readLine();
+            this.nickname = newNick;
+            this.send("Nickname is changed!");
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
 
+    private int menu() {
         String str = "1) Show online\n" +
                 "2) Send message\n" +
                 "3) Group\n" +
                 "4) Rename\n" +
                 "5) Exit\n" +
                 "Your choice input number(1-5): ";
-
         this.send(str);
+
+        int sel = 0;
+        try {
+            sel = this.in.read();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         return sel;
     }
 }

@@ -61,8 +61,8 @@ public class Main {
                             try
                             {
                                 userWord = reader.readLine();
-
-
+                                out.write(userWord);
+                                out.flush();
 
 
 //                                if (userWord.equals("stop"))
