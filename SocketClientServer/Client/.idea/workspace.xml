@@ -2,13 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e698ee47-24e4-4fa4-a4df-6a963b01c1d4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Joker.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/com/company/Main$1ReadMsg.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/com/company/Main$1ReadMsg.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/com/company/Main$1WriteMsg.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/com/company/Main$1WriteMsg.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Client/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/com/company/ServerSomthing.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/com/company/ServerSomthing.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Sticks15/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Sticks15/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Sticks15/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Sticks15/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Sticks15/Sticks15.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Sticks15/Sticks15.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Sticks15/out/production/Sticks15/com/company/Main.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,13 +23,17 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1054">
-              <caret line="60" column="31" lean-forward="true" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
+            <state relative-caret-position="203">
+              <caret line="96" column="54" lean-forward="true" selection-start-line="96" selection-start-column="54" selection-end-line="96" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,10 +53,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1995" />
-    <option name="width" value="1860" />
-    <option name="height" value="2175" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="385" />
+    <option name="y" value="-20" />
+    <option name="width" value="1400" />
+    <option name="height" value="860" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -64,6 +75,8 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.notifications" />
+    <property name="settings.editor.splitter.proportion" value="0.2371342" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -107,15 +120,19 @@
       <workItem from="1559591485628" duration="4000" />
       <workItem from="1559591505563" duration="2803000" />
       <workItem from="1559623440790" duration="3889000" />
-      <workItem from="1559715932424" duration="5930000" />
+      <workItem from="1559715932424" duration="6687000" />
+      <workItem from="1559966385453" duration="2531000" />
+      <workItem from="1560055914727" duration="9693000" />
+      <workItem from="1560083662560" duration="2174000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13804000" />
+    <option name="totallyTimeSpent" value="28959000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="798" y="0" width="744" height="870" extended-state="0" />
+    <frame x="64" y="-6" width="1478" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.2696793" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -126,15 +143,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2635135" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.26891893" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49929577" visible="true" weight="0.270415" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.40562248" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32972974" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.19324325" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007042" side_tool="true" weight="0.270415" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -158,8 +175,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="60" column="31" lean-forward="true" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
+        <state relative-caret-position="203">
+          <caret line="96" column="54" lean-forward="true" selection-start-line="96" selection-start-column="54" selection-end-line="96" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -229,6 +246,17 @@
         </settings>
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
         <settings>
           <splitter-proportions>
             <option name="proportions">

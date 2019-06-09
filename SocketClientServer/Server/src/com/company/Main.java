@@ -57,6 +57,7 @@ class ServerSomthing extends Thread {
 //        try {
             this.send("Connected successfully!");
             this.rename();
+
             while (true) {
                 this.send("menu");
 
@@ -69,8 +70,10 @@ class ServerSomthing extends Thread {
                     case 3: // group
                         break;
                     case 4: // rename
+                        this.rename();
                         break;
                     case 5: // exit
+                        this.logoutUser();
                         break;
                 }
 
@@ -84,10 +87,14 @@ class ServerSomthing extends Thread {
 //        catch (IOException e) {}
     }
 
+    private void logoutUser() {
+        this.send("");
+        Server.serverList.remove(this.socket);
+    }
+
     private void send(String msg)
     {
-        try
-        {
+        try {
             this.out.write(msg + "\n");
             this.out.flush();
         }
@@ -96,10 +103,8 @@ class ServerSomthing extends Thread {
 
     private void showOnline() {
         String userList = "";
-        for (ServerSomthing vr : Server.serverList)
-        {
-            if(vr.socket != this.socket)
-            {
+        for (ServerSomthing vr : Server.serverList) {
+            if(vr.socket != this.socket) {
                 userList += vr.nickname + "|";
             }
         }
@@ -116,9 +121,10 @@ class ServerSomthing extends Thread {
     }
 
     private void rename() {
-        send("Input your nickname: ");
+        String newNick;
+        this.send("\nInput nickname: ");
         try {
-            String newNick = this.in.readLine();
+            newNick = this.in.readLine();
             this.nickname = newNick;
             this.send("Nickname is changed!");
         } catch (IOException e) {
@@ -127,7 +133,7 @@ class ServerSomthing extends Thread {
     }
 
     private int menu() {
-        String str = "1) Show online\n" +
+        String str = "\n1) Show online\n" +
                 "2) Send message\n" +
                 "3) Group\n" +
                 "4) Rename\n" +
@@ -137,7 +143,8 @@ class ServerSomthing extends Thread {
 
         int sel = 0;
         try {
-            sel = this.in.read();
+//            sel = this.in.read() - '0';
+            sel = Integer.parseInt(this.in.readLine());
         } catch (IOException e) {
             e.printStackTrace();
         }

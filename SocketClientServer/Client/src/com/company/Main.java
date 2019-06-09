@@ -10,6 +10,8 @@ public class Main {
     private static BufferedReader in;
     private static BufferedWriter out;
     private static boolean isWork = true;
+    private static String mode = "";
+    private static char sel;
 
     public static void main(String[] args)
     {
@@ -26,16 +28,20 @@ public class Main {
                 class ReadMsg extends Thread {
                     @Override
                     public void run() {
-
                         String str;
                         try {
                             while (true) {
                                 str = in.readLine();
-                                System.out.println(str);
 
                                 switch (str) {
                                     case "menu":
-
+                                        mode = str;
+                                        str = in.readLine();
+                                        System.out.println(str);
+                                        this.menuAns(str);
+                                        break;
+                                    default:
+                                        System.out.println(str);
                                         break;
                                 }
 
@@ -49,7 +55,27 @@ public class Main {
                         catch (IOException e) {}
                     }
 
-
+                    private void menuAns(String str) {
+                        switch (sel) {
+                            case '1':
+                                if (str.equals("")) {
+                                    System.out.println("No user online!");
+                                } else {
+                                    System.out.println(str.replace('|', '\n'));
+                                }
+                                System.out.println("------------------------------------\n");
+                                break;
+                            case '2':
+                                break;
+                            case '3':
+                                break;
+                            case '4':
+                                System.out.println(str);
+                                break;
+                            case '5':
+                                break;
+                        }
+                    }
                 }
 
                 //
@@ -61,9 +87,29 @@ public class Main {
                             try
                             {
                                 userWord = reader.readLine();
-                                out.write(userWord);
-                                out.flush();
 
+                                if (mode.equals("menu")) {
+                                    switch (userWord) {
+                                        case "1":
+                                            sel = '1';
+                                            break;
+                                        case "2":
+                                            sel = '2';
+                                            break;
+                                        case "3":
+                                            sel = '3';
+                                            break;
+                                        case "4":
+                                            sel = '4';
+                                            break;
+                                        case "5":
+                                            sel = '5';
+                                            break;
+                                    }
+                                }
+
+                                out.write(userWord + "\n");
+                                out.flush();
 
 //                                if (userWord.equals("stop"))
 //                                {
